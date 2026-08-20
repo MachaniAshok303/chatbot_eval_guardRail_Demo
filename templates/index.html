@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Chatbot Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="app-header">
+            <h1>AI Chatbot Evaluation</h1>
+            <h2>Responses are served from JSON</h2>
+            <h2>Amplify only judges them</h2>
+        </header>
+
+        <main class="chat-window" id="chat">
+            <div class="message bot">
+                🚀 Welcome to the AI Chatbot Evaluation Portal!
+This chatbot retrieves answers from a predefined JSON knowledge base. Every response is automatically assessed by the Amplify LLM Judge across multiple quality metrics, including Answer Relevancy, Faithfulness, Hallucination, Toxicity, and Bias. Enter a supported question to start the evaluation.🚀 
+            </div>
+        </main>
+
+        <footer class="chat-input">
+            <input type="text" placeholder="Type your message..." id="message" />
+            <button id="send-btn">Send</button>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</body>
+</html>

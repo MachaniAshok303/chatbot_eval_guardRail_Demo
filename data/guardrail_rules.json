@@ -1,0 +1,81 @@
+{
+  "max_input_length": 500,
+
+  "blocked_keywords": [
+    "hack",
+    "hacking",
+    "exploit",
+    "malware",
+    "virus",
+    "ransomware",
+    "bomb",
+    "weapon",
+    "jailbreak",
+    "bypass",
+    "phishing"
+  ],
+
+  "prompt_injection_patterns": [
+    "ignore previous instructions",
+    "ignore all previous instructions",
+    "forget previous instructions",
+    "reveal system prompt",
+    "show system prompt",
+    "print system prompt",
+    "hidden prompt",
+    "developer mode",
+    "act as developer",
+    "bypass safety",
+    "disable guardrails"
+  ],
+
+  "sql_patterns": [
+    "' or '1'='1",
+    "\" or \"1\"=\"1",
+    "union select",
+    "drop table",
+    "delete from",
+    "insert into",
+    "update set",
+    "--",
+    ";--"
+  ],
+
+  "xss_patterns": [
+    "<script",
+    "</script>",
+    "javascript:",
+    "onerror=",
+    "onload=",
+    "<iframe"
+  ],
+
+  "approval_required": [
+    "payment",
+    "pay",
+    "bank",
+    "bank transfer",
+    "money transfer",
+    "transfer money",
+    "delete account",
+    "delete my account",
+    "delete data",
+    "erase my data",
+    "reset password",
+    "change password",
+    "change email",
+    "send email",
+    "api key",
+    "generate api key",
+    "revoke api key"
+],
+ "masking_patterns": {
+    "credit_card": "\\b(?:\\d[ -]*?){13,19}\\b",
+    "cvv": "\\b\\d{3,4}\\b",
+    "expiry_date": "\\b(0[1-9]|1[0-2])\\/(\\d{2}|\\d{4})\\b",
+    "aadhaar": "\\b\\d{4}\\s?\\d{4}\\s?\\d{4}\\b",
+    "pan": "\\b[A-Z]{5}[0-9]{4}[A-Z]{1}\\b",
+    "phone": "\\b(?:\\+91[- ]?)?[6-9]\\d{9}\\b",
+    "email": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
+  }
+}
